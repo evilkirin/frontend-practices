@@ -32,6 +32,12 @@ function main(argv) {
             }
         });
     }).listen(port);
+
+    process.on('SIGTERM', function () {
+    	server.close(function () {
+    		process.exit(0);
+    	});
+    })
 }
 
 function outputFiles(pathnames, writer) {

@@ -9,14 +9,14 @@ var dirname = path.dirname(process.argv[1]);
 var MIME = {
     '.css': 'text/css',
     '.js': 'application/javascript'
-}
+};
 
 function combineFiles(pathnames, cb) {
     var output = [];
 
     (function next(i, len) {
         if (i < len) {
-            fs.readFile(pathnames[i], function(err, data) {
+            fs.readFile(pathnames[i], function (err, data) {
                 if (err) {
                     cb(err);
                 } else {
@@ -39,7 +39,7 @@ function parseUrl(root, url) {
 
     parts = url.split('??');
     base = parts[0];
-    pathnames = parts[1].split(',').map(function(value) {
+    pathnames = parts[1].split(',').map(function (value) {
         return path.join(root, base, value);
     });
 
@@ -54,21 +54,21 @@ function main(argv) {
         root = config.root || '',
         port = config.port || 80;
 
-    root = path.join(dirname,root);
-    http.createServer(function(request, response) {
+    root = path.join(dirname, root);
+    http.createServer(function (request, response) {
         var urlInfo = parseUrl(root, request.url);
 
-        combineFiles(urlInfo.pathnames, function(err, data) {
+        combineFiles(urlInfo.pathnames, function (err, data) {
             if (err) {
                 response.writeHead(404);
                 response.end(err.message);
             } else {
                 response.writeHead(200, {
-                    'contentType': urlInfo.mime
+                    contentType: urlInfo.mime
                 });
                 response.end(data);
             }
-        })
+        });
     }).listen(port);
 }
 
