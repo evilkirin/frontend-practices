@@ -72,4 +72,4 @@ function main(argv) {
     }).listen(port);
 }
 
-main(process.argv.slice(2))
+main(process.argv.slice(2));
