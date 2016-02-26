@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <meta charset="utf-8">
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!--上方用户信息展示区域-->
+        <div class="head">
+            <img class="user-icon">
+            <p class="user-nick text48"></p>
+        </div>
+        <!--输入界面-->
+        <div class="stage" id="input-container">
+            <p class="title text54">猜猜你的账户价值</p>
+            <input id="guess-input" type="number" class="text36">
+            <div class="btn text36">确定</div>
+            <p class="game-desc">
+                游戏规则：
+                <br> 1. 账户价值以整百为单位. 差距小于一百即认为猜中.
+                <br> 2. 本游戏仅供娱乐, 其数值不代表账户的实际价值.
+            </p>
+        </div>
+        <!--成功界面-->
+        <div class="stage" id="succ-container">
+            <p class="my-icon">&#xe600;</p>
+            <p class="title text54">恭喜你, 猜对了</p>
+            <p class="sub-title text36">只用了<span></span>次机会哦</p>
+            <div class="btn text36">分享</div>
+        </div>
+        <!--失败界面-->
+        <div class="stage" id="fail-container">
+            <p class="my-icon">&#xe601;</p>
+            <p class="title text54">好可惜, 猜<span></span>了哦</p>
+            <p class="sub-title text36">已经尝试<span></span>次</p>
+            <div class="btn text36">我再试试</div>
+        </div>
+    </div>
+    <script src="//g.alicdn.com/mtb/??lib-promise/3.1.3/promise.js,lib-mtop/2.0.8/mtop.js,lib-login/1.5.0/login.js,lib-windvane/2.1.1/windvane.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

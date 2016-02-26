@@ -1,0 +1,71 @@
+.banner {
+  display: block;
+
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+.tab-wrap {
+
+  border-bottom: 1px solid #666;
+  overflow: hidden;
+}
+.tab-wrap a {
+  display: block;
+  width: 50%;
+  height: 1.28rem;
+
+  float: left;
+  text-align: center;
+  line-height: 1.28rem;
+  font-size: 0.4266666rem;
+  color: #999;
+}
+
+.tab-wrap .active {
+  color:#ff4a00;
+}
+
+
+.item-list li {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.item-list li img {
+  width: 3.2rem;
+  height: 3.2rem;
+  float: left;
+}
+.item-list li .item-info {
+  margin-left: 3.52rem;
+  font-size: 0.42rem;
+  color: #333;
+  line-height: 1.5;
+}
+.item-list li .cut-tip {
+  width: 2.4rem;
+  height: 0.53333333rem;
+  background: url(http://gw.alicdn.com/tfscom/TB1eaEaLXXXXXXQapXXl7qTHFXX-180-45.png) no-repeat;
+  display: block;
+  background-size: 100% 100%;
+  font-size: 0.3rem;
+  text-align: center;
+}
+
+.item-list li .price-info {
+  color: #ff4a00;
+}
+.item-list li .price-info strong {
+  font-size: 0.6rem;
+}
+.item-list li .price-info del {
+  color: #999;
+}
+
+
+.future {
+  display: none;
+}
