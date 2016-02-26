@@ -1,0 +1,22 @@
+{
+  "name": "with-babel",
+  "version": "1.0.0",
+  "description": "babel with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel",
+    "webpack"
+  ],
+  "author": "zach",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "~6.5.2",
+    "babel-loader": "~6.2.3",
+    "babel-preset-es2015": "~6.5.0",
+    "moment": "~2.11.2",
+    "webpack": "~1.12.14"
+  }
+}
