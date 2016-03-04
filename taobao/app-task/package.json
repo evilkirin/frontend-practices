@@ -1,0 +1,54 @@
+{
+  "name": "app-task",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:xieyi.xie/app-task.git"
+  },
+  "author": {
+    "name": "xieyi.xie",
+    "email": "xieyi.xie@alibaba-inc.com"
+  },
+  "keywords": [
+    "vue",
+    "app"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "moment": "~2.11.2",
+    "vue": "^1.0.10"
+  },
+  "devDependencies": {
+    "@ali/gulp-img-uploader": "~0.4.0",
+    "@ali/img4dpr-loader": "~0.1.0",
+    "@ali/lib-es6polyfill": "~0.1.1",
+    "@ali/lib-mtop": "~2.0.13",
+    "@ali/lib-windvane": "~2.1.4",
+    "autoprefixer": "~6.1.0",
+    "babel-core": "~6.5.2",
+    "babel-loader": "~6.2.4",
+    "babel-plugin-transform-runtime": "~6.5.2",
+    "babel-preset-es2015": "~6.5.0",
+    "babel-runtime": "~5.8.35",
+    "css-loader": "~0.21.0",
+    "gulp": "~3.9.0",
+    "gulp-htmlone": "~0.1.9",
+    "gulp-webpack": "~1.5.0",
+    "json-loader": "~0.5.3",
+    "less": "~2.6.0",
+    "less-loader": "~2.2.2",
+    "name-loader": "~0.1.0",
+    "postcss-loader": "~0.8.0",
+    "postcss-px2rem": "~0.2.0",
+    "style-loader": "~0.13.0",
+    "vinyl-named": "~1.1.0",
+    "vue-hot-reload-api": "~1.2.1",
+    "vue-html-loader": "~1.0.0",
+    "vue-loader": "~7.2.0",
+    "webpack": "~2.1.0-beta.4"
+  }
+}
