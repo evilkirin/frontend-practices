@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/lib/node_modules/tnpm/node_modules/ali-npm/bin/npm-cli.js',
+1 verbose cli   '--fse_binary_host_mirror=https://npm.taobao.org/mirrors/fsevents/',
+1 verbose cli   '--no-proxy',
+1 verbose cli   '--disturl=https://npm.taobao.org/mirrors/node',
+1 verbose cli   '--userconfig=/Users/zac-tse/.tnpmrc',
+1 verbose cli   '--registry=http://registry.npm.alibaba-inc.com',
+1 verbose cli   '--node-gyp=/usr/local/lib/node_modules/tnpm/node_modules/node-gyp/bin/node-gyp.js',
+1 verbose cli   '--cache=/Users/zac-tse/.tnpm',
+1 verbose cli   'i' ]
+2 info using npm@2.15.2
+3 info using node@v5.7.0
+4 verbose readDependencies loading dependencies from /Users/zac-tse/Development/github/frontend-practices/package.json
+5 error install Couldn't read dependencies
+6 verbose stack Error: ENOENT: no such file or directory, open '/Users/zac-tse/Development/github/frontend-practices/package.json'
+6 verbose stack     at Error (native)
+7 verbose cwd /Users/zac-tse/Development/github/frontend-practices
+8 error Darwin 15.2.0
+9 error argv "/usr/local/bin/node" "/usr/local/lib/node_modules/tnpm/node_modules/ali-npm/bin/npm-cli.js" "--fse_binary_host_mirror=https://npm.taobao.org/mirrors/fsevents/" "--no-proxy" "--disturl=https://npm.taobao.org/mirrors/node" "--userconfig=/Users/zac-tse/.tnpmrc" "--registry=http://registry.npm.alibaba-inc.com" "--node-gyp=/usr/local/lib/node_modules/tnpm/node_modules/node-gyp/bin/node-gyp.js" "--cache=/Users/zac-tse/.tnpm" "i"
+10 error node v5.7.0
+11 error npm  v2.15.2
+12 error path /Users/zac-tse/Development/github/frontend-practices/package.json
+13 error code ENOPACKAGEJSON
+14 error errno -2
+15 error syscall open
+16 error package.json ENOENT: no such file or directory, open '/Users/zac-tse/Development/github/frontend-practices/package.json'
+16 error package.json This is most likely not a problem with npm itself.
+16 error package.json npm can't find a package.json file in your current directory.
+17 verbose exit [ -2, true ]
