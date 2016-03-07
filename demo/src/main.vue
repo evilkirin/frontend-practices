@@ -21,20 +21,25 @@
 
 <template>
   <div class="page-content">
-    <v-banner></v-banner>
-    <v-nav></v-nav>
-    <v-items></v-items>
-    <v-image></v-image>
+    <banner></banner>
+    <navigator></navigator>
+    <items></items>
+    <image></image>
   </div>
 </template>
 
 <script>
-  module.exports = {
-    components: {
-      'v-banner': require("./banner.vue"),
-      'v-nav': require("./nav.vue"),
-      'v-items': require("./items.vue"),
-      'v-image': require("./image.vue")
-    }
+import Banner from './banner.vue'
+import Navigator from './nav.vue'
+import Items from './items.vue'
+import Image from './image.vue'
+
+export default {
+  components: {
+    Banner,
+    Navigator,
+    Items,
+    Image
   }
+}
 </script>

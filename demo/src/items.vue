@@ -1,12 +1,19 @@
 <style lang="less">
+	.item-list {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
 </style>
 
 <template>
-	<div class="item-list">
-		<p>掌柜推荐</p>
+	<div class="container md">
+		<p class="list-title">掌柜推荐</p>
 		<div>
-			<ul>
-				<li><img src="" alt="">
+			<ul class="item-list">
+				<li>
+					<img class="item" src="//img.alicdn.com/bao/uploaded/i2/TB14DFaKpXXXXbvXpXXXXXXXXXX_!!0-item_pic.jpg" alt="">
 					<p></p>
 					<div>
 						<div></div>
