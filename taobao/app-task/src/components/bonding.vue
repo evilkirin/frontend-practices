@@ -6,11 +6,11 @@
 		</div>
 		<div class="bonding-content">
 			<div class="compare">
-				<img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-				<span></span>
-				<img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+				<img src="https://gw.alicdn.com/tps/TB1TXbnLVXXXXX8aXXXXXXXXXXX-260-378.jpg">
+				<p style="font-size: 64px">VS</p>
+				<img src="https://gw.alicdn.com/tps/TB1wCrBLVXXXXcdXpXXXXXXXXXX-300-300.jpg">
 			</div>
-			<div class="desc"></div>
+			<div class="desc">放两张图片对比 可以是你认识的人 比如师兄 刚开始觉得是什么样的 后来发现是什么样的； 比如食堂，理想中以为是什么样的，实际是什么样的 ...</div>
 		</div>
 	</div>
 </template>
@@ -29,6 +29,11 @@
 </script>
 
 <style lang="less" scoped>
+	img {
+		height: 300px;
+		width: 300px;
+	}
+
 	.bonding-header {
 		width: 100%;
 		display: flex;
@@ -54,7 +59,21 @@
 	}
 
 	.bonding-content {
-		margin-top: 24px;
+		margin: 0 20px;
+		padding-bottom: 30px;
 	}
 
+	.compare {
+		margin: 30px 0;
+		height: 300px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.desc {
+		font-size: 28px;
+		// margin-bottom: 30px 为什么在这里写mb不生效？
+	}
 </style>

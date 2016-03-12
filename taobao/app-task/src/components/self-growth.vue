@@ -7,13 +7,19 @@
 		<div class="sg-content">
 			<ul class="sg-list">
 				<li class="sg-item">
-					<img class="sg-item-icon" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+					<img class="sg-item-icon" src="https://gw.alicdn.com/tps/TB1b9YALVXXXXXFXFXXXXXXXXXX-120-120.jpg">
 					<div class="sg-item-desc">
-						<p class="sg-item-head"></p>
-						<p class="sg-item-content"></p>
+						<p class="sg-item-head">[lib-mtop]</p>
+						<p class="sg-item-content">请描述你对此组件功能的理解或新的体会</p>
 					</div>
 				</li>
-				<li class="sg-item"></li>
+				<li class="sg-item">
+					<img class="sg-item-icon" src="https://gw.alicdn.com/tps/TB1b9YALVXXXXXFXFXXXXXXXXXX-120-120.jpg">
+					<div class="sg-item-desc">
+						<p class="sg-item-head">[lib-mtop]</p>
+						<p class="sg-item-content">请描述你对此组件功能的理解或新的体会把所哟你所有用到的组件或者api写出来 不限于组件 也可以是某个同学分享等等等继续等继续等</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -62,24 +68,48 @@
 	
 		
 		.sg-list {
-			
+			padding-left: 20px;
+			padding-right: 20px;
 		
 			.sg-item {
-				display: block;
+				display: flex;
+				position: relative;				
+				flex-direction: row;
 
 				.sg-item-icon {
-					
+					margin-top: 20px;
+					margin-bottom: 20px;
+					margin-right: 20px;
 				}
 
 				.sg-item-desc {
 					font-size: 28px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
 					.sg-item-head {
 
 					}
 
 					.sg-item-content {
-
+						max-height: 111px;
+						display: -webkit-box;
+						-webkit-line-clamp: 3;
+  						-webkit-box-orient: vertical;
+  						overflow: hidden;
+  						text-overflow: ellipsis;
 					}
+				}
+
+				&:not(:last-child):after {
+					content: '';
+					width: 100%;
+					left: 0;
+					background-color: #dddddd;
+					height: 1px;
+					position: absolute;
+					bottom: 0px;
 				}
 			}
 		}
