@@ -7,8 +7,8 @@
 		<div class="impr-slider">
 			<div class="slider-outer">
 				<ul class="slider-wrap">
-					<li><img class="slider-img" src="https://img.alicdn.com/tps/TB1nlqmLVXXXXaqXFXXXXXXXXXX-1420-928.jpg"></li>
-					<li><img class="slider-img" src="https://img.alicdn.com/tps/TB1nlqmLVXXXXaqXFXXXXXXXXXX-1420-928.jpg"></li>
+					<li><img class="slider-img" data-size="710x464" data-src="https://img.alicdn.com/tps/TB1nlqmLVXXXXaqXFXXXXXXXXXX-1420-928.jpg"></li>
+					<li><img class="slider-img" data-size="710x464" data-src="https://img.alicdn.com/tps/TB1nlqmLVXXXXaqXFXXXXXXXXXX-1420-928.jpg"></li>
 				</ul>
 			</div>
 			<div class="slider-status"></div>
@@ -18,6 +18,7 @@
 
 <script>
 	import slider from '@ali/lib-slider'
+	import img from '@ali/lib-img'
 
 	export default {
 
@@ -29,12 +30,26 @@
             	hasTrigger : true,
             	play: true
 			});
+
+			lib.img({
+				'class': 'slider-img',
+				'dataSrc': 'data-src',
+				'q': ['q50', 'q30'],
+				'enableLazyload': true
+			});
+
+			lib.appear.init({
+				container:'.slider-wrap',
+				appearCallback:function(){
+					console.log(1213)
+				}
+			});
 		},
 
 		data () {
 			return {
 
-			};
+			}
 		}
 	};
 </script>

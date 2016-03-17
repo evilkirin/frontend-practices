@@ -1,24 +1,20 @@
 <template>
-	<div class="md">
-		<div class="app-header">
-			<div class="main-info">
-				<div class="personal-info">
-					<p class="nickname">燮羽</p>
-					<p class="mail">xieyi.xie@alibaba-inc.com</p>
-					<p class="newbie">新人驾到</p>
-				</div>
-				<img class="user-icon" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-				<p class="welcome">{{welcome}}</p>
-				<div class="share-button" v-on:click="shareThePage">分享</div>
+	<div class="app-header">
+		<div class="main-info">
+			<div class="personal-info">
+				<p class="nickname">燮羽</p>
+				<p class="mail">xieyi.xie@alibaba-inc.com</p>
+				<p class="newbie">新人驾到</p>
 			</div>
-			<div class="system-time">
-				<p class="time-segment">{{theYear}}</p>
-				<p class="time-segment">{{monthAndDay}}</p>
-				<p class="time-segment">{{dayOfWeek}}</p>
-			</div>
+			<img class="user-icon" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+			<p class="welcome">{{welcome}}</p>
+			<div class="share-button" @click="shareThePage">分享</div>
 		</div>
-		<nick-list></nick-list>
-		<navi></navi>
+		<div class="system-time">
+			<p class="time-segment">{{theYear}}</p>
+			<p class="time-segment">{{monthAndDay}}</p>
+			<p class="time-segment">{{dayOfWeek}}</p>
+		</div>
 	</div>
 </template>
 
@@ -27,80 +23,81 @@
 	import moment from 'moment'
 	import login from '@ali/lib-login'
 	import n2c from '../../lib/lib-num'
-	import nickList from './nick-list.vue'
-	import navi from './navigator.vue'
+	import * as env from 'amfe-env'
 
 	export default {
-		components : {nickList, navi},
 		name: 'big-header',
 		ready() {
 			var nickPromise = lib.mtop.loginRequest({
 				api: 'mtop.user.getUserSimple',
 				v: '1.0',
 				ecode: '1'
-			});
+			})
 
 			var mtopPromise = lib.mtop.request({
 				api: 'mtop.common.getTimestamp',
 				v: '1.0',
 				ecode: 0,
 				data: {}
-			});
+			})
 
-			var urlTmp = '//wwc.alicdn.com/avatar/getAvatar.do?userId={{USERID}}&width=100&height=100&type=sns';
+			var urlTmp = '//wwc.alicdn.com/avatar/getAvatar.do?userId={{USERID}}&width=100&height=100&type=sns'
 
 			nickPromise.then(resp => {
-				this.loginUserNick = resp.data.nick;
-				this.welcome = `欢迎您：${resp.data.nick} ~ 访问我的页面，新手上路，敬请拍砖`;
-				document.querySelector('.user-icon').src = `//wwc.alicdn.com/avatar/getAvatar.do?userId=${resp.data.userNumId}&width=100&height=100&type=sns`;
+				this.loginUserNick = resp.data.nick
+				this.welcome = `欢迎您：${resp.data.nick} ~ 访问我的页面，新手上路，敬请拍砖`
+				document.querySelector('.user-icon').src = `//wwc.alicdn.com/avatar/getAvatar.do?userId=${resp.data.userNumId}&width=100&height=100&type=sns`
 			}
 			, err => {
-				debugger;
-				alert('Fail to load nick of the login user! ' + err);
-			});
+				alert('Fail to load nick of the login user! ' + err)
+			})
 
 			mtopPromise.then(resJson => {
 				console.log(resJson)
 				if(resJson.retType === lib.mtop.RESPONSE_TYPE.SUCCESS) {
-					moment.locale('zh-cn');
-					var d = new Date(Number(resJson.data.t));
-					this.theYear = n2c(d.getFullYear()) + '年';
-					this.monthAndDay = n2c(d.getMonth() + 1) + '月' + n2c(d.getDate()) + '日';
-					this.dayOfWeek = moment.weekdays(d.getDay());
+					moment.locale('zh-cn')
+					var d = new Date(Number(resJson.data.t))
+					this.theYear = n2c(d.getFullYear()) + '年'
+					this.monthAndDay = n2c(d.getMonth() + 1) + '月' + n2c(d.getDate()) + '日'
+					this.dayOfWeek = moment.weekdays(d.getDay())
 				}
 			}).catch(resJson => {
-				console.log(resJson);		
-			});
+				console.log(resJson)
+			})
 		},
 
 		data () {
 			return {
-				theYear: '',
+				theYear: '',	
 				monthAndDay: '',
 				dayOfWeek: '',
 				welcome: '',
 				headImg: '',
 				loginUserNick: ''
-			};
+			}
 		},
 
 		methods: {
 			shareThePage: function () {
-				var params = {
-		            // 分享内容的标题
-		            title: `分享${document.querySelector('.nickname').innerText}的主页`,
-		            // 要分享的内容
-		            text: `${this.loginUserNick}正在围观${document.querySelector('.nickname').innerText}的主页哦！`,
-		            // 要分享的图片地址
-		            image: 'http://img0.bdstatic.com/img/image/4359213b07eca806538f43aff0495dda144ac3482d1.jpg',
-		            // 要分享的 URL
-		            url: location.href
-		        };
-		        window.WindVane.call('TBSharedModule', 'showSharedMenu', params, function (e) {
-		        	// alert('success: ' + JSON.stringify(e));
-		        }, function (e) {
-		        	alert('failure: ' + JSON.stringify(e));
-		        });
+				if(env.aliapp && env.aliapp.windvane) {
+					var params = {
+			            // 分享内容的标题
+			            title: `分享${document.querySelector('.nickname').innerText}的主页`,
+			            // 要分享的内容
+			            text: `${this.loginUserNick}正在围观${document.querySelector('.nickname').innerText}的主页哦！`,
+			            // 要分享的图片地址
+			            image: 'http://img0.bdstatic.com/img/image/4359213b07eca806538f43aff0495dda144ac3482d1.jpg',
+			            // 要分享的 URL
+			            url: location.href
+			        }
+			        window.WindVane.call('TBSharedModule', 'showSharedMenu', params, function (e) {
+			        	// alert('success: ' + JSON.stringify(e));
+			        }, function (e) {
+			        	alert('failure: ' + JSON.stringify(e));
+			        })
+			    } else {
+			    	alert('您当前不在手淘环境中！')
+			    }
 		    }
 	}
 }

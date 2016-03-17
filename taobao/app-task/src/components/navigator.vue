@@ -1,32 +1,32 @@
 <template>
-<div class="navi-container">
-	<ul class="navi-list">
-		<li class="navi-item">
-			<a href="#impression">
-				<div class="navi-icon" style="background-color: #6fb2cb;">&#xe601;</div>
-				<p class="navi-label">阿里印象</p>
-			</a>
-		</li>
-		<li class="navi-item">
-			<a href="#self-growth">
-				<div class="navi-icon" style="background-color: #6fcb9c;">&#xe603;</div>
-				<p class="navi-label">个人成长</p>
-			</a>
-		</li>
-		<li class="navi-item">
-			<a href="#bonding">
-				<div class="navi-icon" style="background-color: #cb9e6f;">&#xe600;</div>
-				<p class="navi-label">心动接触</p>
-			</a>
-		</li>
-		<li class="navi-item">
-			<a href="#selfie">
-				<div class="navi-icon" style="background-color: #cb6f91;">&#xe602;</div>
-				<p class="navi-label">我型我秀</p>
-			</a>
-		</li>
-	</ul>
-</div>
+	<div class="navi-container md">
+		<ul class="navi-list">
+			<li class="navi-item">
+				<a href="#impression">
+					<div class="navi-icon" style="background-color: #6fb2cb;">&#xe601;</div>
+					<p class="navi-label">阿里印象</p>
+				</a>
+			</li>
+			<li class="navi-item">
+				<a href="#self-growth">
+					<div class="navi-icon" style="background-color: #6fcb9c;">&#xe603;</div>
+					<p class="navi-label">个人成长</p>
+				</a>
+			</li>
+			<li class="navi-item">
+				<a href="#bonding">
+					<div class="navi-icon" style="background-color: #cb9e6f;">&#xe600;</div>
+					<p class="navi-label">心动接触</p>
+				</a>
+			</li>
+			<li class="navi-item">
+				<a href="#selfie">
+					<div class="navi-icon" style="background-color: #cb6f91;">&#xe602;</div>
+					<p class="navi-label">我型我秀</p>
+				</a>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script>

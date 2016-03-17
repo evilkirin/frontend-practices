@@ -14,6 +14,7 @@
 
 <script>
 import scroll from '@ali/lib-scroll'
+import sticky from '@ali/lib-sticky'
 
 export default {
 
@@ -28,6 +29,7 @@ export default {
   	};
   	var scroller = new Scroll(options);
   	scroller.init();
+  	new lib.sticky({element: '.nick-list-container'});
   },
 
   data () {
@@ -43,6 +45,7 @@ export default {
 	background-color: #333333;
 	width: 750px;
 	overflow: auto;
+	z-index: 100;
 }
 
 .nick-list {

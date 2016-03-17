@@ -7,14 +7,14 @@
 		<div class="sg-content">
 			<ul class="sg-list">
 				<li class="sg-item">
-					<img class="sg-item-icon" src="https://gw.alicdn.com/tps/TB1b9YALVXXXXXFXFXXXXXXXXXX-120-120.jpg">
+					<img class="sg-item-icon" src="../../images/gundam.jpg">
 					<div class="sg-item-desc">
 						<p class="sg-item-head">[lib-mtop]</p>
 						<p class="sg-item-content">请描述你对此组件功能的理解或新的体会</p>
 					</div>
 				</li>
 				<li class="sg-item">
-					<img class="sg-item-icon" src="https://gw.alicdn.com/tps/TB1b9YALVXXXXXFXFXXXXXXXXXX-120-120.jpg">
+					<img class="sg-item-icon" src="../../images/gundam.jpg">
 					<div class="sg-item-desc">
 						<p class="sg-item-head">[lib-mtop]</p>
 						<p class="sg-item-content">请描述你对此组件功能的理解或新的体会把所哟你所有用到的组件或者api写出来 不限于组件 也可以是某个同学分享等等等继续等继续等</p>
@@ -68,22 +68,23 @@
 	
 		
 		.sg-list {
-			padding-left: 20px;
-			padding-right: 20px;
-		
 			.sg-item {
 				display: flex;
 				position: relative;				
 				flex-direction: row;
+				justify-content: flex-start;
 
 				.sg-item-icon {
 					margin-top: 20px;
 					margin-bottom: 20px;
 					margin-right: 20px;
+					width: 120px;
+					height: 120px;
 				}
 
 				.sg-item-desc {
 					font-size: 28px;
+					width: 550px;
 					display: flex;
 					justify-content: center;
 					flex-direction: column;
@@ -93,7 +94,7 @@
 					}
 
 					.sg-item-content {
-						max-height: 111px;
+						max-height: 120px;
 						display: -webkit-box;
 						-webkit-line-clamp: 3;
   						-webkit-box-orient: vertical;

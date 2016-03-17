@@ -7,19 +7,19 @@
 		<div class="selfie-content">
 			<ul class="selfie-list">
 				<li class="selfie-item">
-					<img class="item-img" src="https://gw.alicdn.com/tps/TB1cwYsLVXXXXa6XVXXXXXXXXXX-275-160.png">
+					<img class="item-img" src="../../images/lady.jpg">
 					<p class="item-title">这是我的作品这是我的 ...</p>
 				</li>
 				<li class="selfie-item">
-					<img class="item-img" src="https://gw.alicdn.com/tps/TB1cwYsLVXXXXa6XVXXXXXXXXXX-275-160.png">
+					<img class="item-img" src="../../images/lady.jpg">
 					<p class="item-title">这是我的作品这是我的 ...</p>
 				</li>
 				<li class="selfie-item">
-					<img class="item-img" src="https://gw.alicdn.com/tps/TB1cwYsLVXXXXa6XVXXXXXXXXXX-275-160.png">
+					<img class="item-img" src="../../images/lady.jpg">
 					<p class="item-title">这是我的作品这是我的 ...</p>
 				</li>
 				<li class="selfie-item">
-					<img class="item-img" src="https://gw.alicdn.com/tps/TB1cwYsLVXXXXa6XVXXXXXXXXXX-275-160.png">
+					<img class="item-img" src="../../images/lady.jpg">
 					<p class="item-title">这是我的作品这是我的 ...</p>
 				</li>
 			</ul>

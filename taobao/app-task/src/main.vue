@@ -1,6 +1,8 @@
 <template>
   <div class="main-area">
     <big-header></big-header>
+    <nick-list></nick-list>
+    <navi></navi>
     <impr id="impression"></impr>
     <self-growth id="self-growth"></self-growth>
     <bonding id="bonding"></bonding>
@@ -14,6 +16,8 @@ import impr from './components/impression.vue'
 import selfGrowth from './components/self-growth.vue'
 import bonding from './components/bonding.vue'
 import selfie from './components/selfie.vue'
+import nickList from './components/nick-list.vue'
+import navi from './components/navigator.vue'
 
 export default {
 
@@ -22,7 +26,9 @@ export default {
     impr,
     selfGrowth,
     bonding,
-    selfie
+    selfie,
+    nickList,
+    navi
   },
 
   data () {

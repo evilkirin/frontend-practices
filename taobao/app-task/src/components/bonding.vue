@@ -6,9 +6,9 @@
 		</div>
 		<div class="bonding-content">
 			<div class="compare">
-				<img src="https://gw.alicdn.com/tps/TB1TXbnLVXXXXX8aXXXXXXXXXXX-260-378.jpg">
+				<img src="../../images/big-brother.jpg">
 				<p style="font-size: 64px">VS</p>
-				<img src="https://gw.alicdn.com/tps/TB1wCrBLVXXXXcdXpXXXXXXXXXX-300-300.jpg">
+				<img src="../../images/fist.jpg">
 			</div>
 			<div class="desc">放两张图片对比 可以是你认识的人 比如师兄 刚开始觉得是什么样的 后来发现是什么样的； 比如食堂，理想中以为是什么样的，实际是什么样的 ...</div>
 		</div>
