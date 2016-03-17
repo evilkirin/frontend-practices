@@ -56,7 +56,7 @@
 			}
 			, err => {
 				debugger;
-				alert('出错了！' + err);
+				alert('Fail to load nick of the login user! ' + err);
 			});
 
 			mtopPromise.then(resJson => {
